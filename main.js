@@ -1,43 +1,42 @@
-// CREANDO NUESTRO BOTON
-/////////////////////////////////////////////////////////////////
-let dropDownBtn = document.createElement("a");
-dropDownBtn.setAttribute("id", "dropdown");
-dropDownBtn.setAttribute("href", "#");
-dropDownBtn.style = "display: flex; justify-content: center; align-items: center; width: 100%; margin-top: 15px";
+// BURGER BUTTON
 
-let burgerImg = document.createElement("img");
-burgerImg.setAttribute("src", "./imagenes/Hamburger_icon.svg");
-burgerImg.style = "display: block; filter: invert(100%)";
+const navBar = document.querySelector(".nav-container");
+console.log(navBar);
 
-let textoInt = document.createElement("p");
-textoInt.innerHTML = "PRESIONE AQUÍ"
-textoInt.style = "color: white; padding: 0px 15px; font-weight: 600";
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
-dropDownBtn.append(burgerImg, textoInt);
-console.log(dropDownBtn);
+// Indicador de campo faltante
+const aviso = document.createElement("h2");
+aviso.innerHTML = "Ingrese todos los campos";
+aviso.style = "color: #FF6415";
+console.log(aviso);
 
-// AÑADIENDO NUESTRO BOTON AL DOM
-//////////////////////////////////////////////////////////////
-let barranav = document.querySelector(".ul-container");
-let navcontainer = document.querySelector(".nav-container");
-navcontainer.insertBefore(dropDownBtn, barranav);
+const formulario = document.querySelector(".formulario");
+const inputs = formulario.querySelectorAll("input, textarea");
+const submit = document.querySelector(".sendForm");
 
-let header = document.querySelector("header");
+console.log(formulario, inputs, submit);
 
+function camposVacios() {
+  for (input of inputs) {
+    const validarCampo =
+      input.value == "" ? formulario.insertBefore(aviso, submit) : formulario;
 
-// MEDIA QUERY
-const mediaQuery = window.matchMedia("(max-width: 730px)");
-
-
-// el boton
-dropDownBtn.addEventListener("click", clickarBoton);
-function clickarBoton(){
-    let indexStat = [];
-    let contenedores = document.querySelectorAll(".li-container");
-    for(let i = 0; i < contenedores.length; i++){
-        contenedores[i].style = "visibility: visible";
-        indexStat.push(i);
+    if (input.value == "") {
+      input.style.background = "#FDFF94";
+    } else {
+      input.style.background = "#fff";
     }
-    document.querySelector(".ul-container").style="height: 300px; justify-content: space-evenly;"
-    header.style.height = "520px";
+  }
 }
+
+submit.addEventListener("click", camposVacios);
