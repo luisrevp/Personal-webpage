@@ -91,7 +91,7 @@ body {
 
 header {
   width: 100%;
-  height: 12vh;
+  height: 100px;
   display: flex;
   background: rgb(0, 0, 0);
   border-bottom: 5px solid orange;
@@ -120,7 +120,6 @@ header {
 
 /* BARRA DE NAVEGACION */
 
-/* este es el boton que desglosa las otras opciones */
 .burger-container {
   display: none;
 }
@@ -480,7 +479,7 @@ footer {
   display: flex;
   background: #000;
   width: 100%;
-  height: 6vh;
+  height: 50px;
   margin-top: 200px;
   justify-content: center;
   align-items: center;
@@ -545,21 +544,41 @@ footer div > p {
 
   header {
     display: flex;
-    /*este height cambiará con javascript*/
-    min-height: 32vh;
+    min-height: 18vh;
     flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    align-items: flex-start;
   }
 
   .logo-container {
-    height: 40%;
+    height: 60%;
     width: 100%;
   }
 
+  .burger-container {
+    display: flex;
+    width: 100%;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 20px 10px;
+  }
+
+  .burger-container img {
+    display: inline-block;
+    width: 40px;
+    margin: 0px 20px;
+    filter: invert(100);
+  }
+
   .nav-container {
+    justify-content: center;
     height: 60%;
     width: 100%;
+    display: none;
   }
 
   .nav-container .ul-container {
