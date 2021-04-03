@@ -1,21 +1,16 @@
+// Boton de navegacion
 const navButton = document.getElementById("burger");
 const navBar = document.querySelector(".nav-container");
-console.log(navButton);
 
 function showBar() {
   const showingBar =
-    navBar.style.display == "flex"
+    navBar.style.display == "block"
       ? (navBar.style.display = "none")
-      : (navBar.style.display = "flex");
+      : (navBar.style.display = "block");
   return showingBar;
 }
 
 navButton.addEventListener("click", showBar);
-
-// const resNav = window.innerWidth(730);
-// if (resNav.matches) {
-//   navBar.style.display = "flex";
-// }
 
 //
 //
@@ -32,8 +27,6 @@ navButton.addEventListener("click", showBar);
 const aviso = document.createElement("h2");
 aviso.innerHTML = "Ingrese todos los campos";
 aviso.style = "color: #FF6415;";
-
-console.log(aviso);
 
 const formulario = document.querySelector(".formulario");
 const inputs = formulario.querySelectorAll("input, textarea");
