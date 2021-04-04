@@ -2,6 +2,7 @@
 const navButton = document.getElementById("burger");
 const navBar = document.querySelector(".nav-container");
 
+// función para mostrar/ocultar la toggle menu bar (botón hamburguesa)
 function showBar() {
   const showingBar =
     navBar.style.display == "block"
@@ -9,8 +10,14 @@ function showBar() {
       : (navBar.style.display = "block");
   return showingBar;
 }
-
 navButton.addEventListener("click", showBar);
+
+// mostrar la barra de navegación al superar los 730px ("resize" event)
+const resizePage = addEventListener("resize", function () {
+  if (innerWidth > 730 && navBar.style.display == "none") {
+    navBar.style.display = "block";
+  }
+});
 
 //
 //

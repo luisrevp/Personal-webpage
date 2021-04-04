@@ -1,0 +1,12 @@
+body,
+main,
+section {
+  height: auto;
+  width: auto;
+  padding: 0;
+  margin: 0;
+}
+
+.redes-wrapper {
+  min-height: 50vh;
+}

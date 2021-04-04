@@ -578,14 +578,18 @@ footer div > p {
 
   .burger-container {
     display: flex;
-    width: 100%;
+    align-items: center;
+    justify-content: center;
+    width: 210px;
+    padding: 8px 8px;
+    margin: auto;
+    margin-bottom: 15px;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 600;
+    border: 2px solid #fff;
+    border-radius: 10px;
     color: #fff;
-    align-items: center;
-    justify-content: center;
-    padding: 0px 20px 10px;
   }
 
   .burger-container img {
@@ -666,4 +670,8 @@ footer div > p {
   footer {
     margin: 0;
   }
+}
+
+.nav-container {
+  display: block;
 }
