@@ -1,1 +1,5 @@
-notesAdd.txt
+/node_modules
+/views
+package.json
+package-lock.json
+nodemailer.js
