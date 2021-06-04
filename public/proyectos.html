@@ -4,10 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Luis Revilla" />
-    <meta
-      name="keywords"
-      content="Pagina, personal, sitio web, website, proyectos"
-    />
+    <meta name="keywords" content="Pagina, personal, sitio web, website" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <script
       src="https://kit.fontawesome.com/58f3b91493.js"
@@ -18,14 +15,13 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" type="text/css" href="css/index.css" />
-    <link rel="stylesheet" type="text/css" href="css/proyectos.css" />
-    <title>Mis Proyectos</title>
+    <title>Mi página web</title>
   </head>
   <body>
     <!-- ENCABEZADO -->
     <header>
       <div class="logo-container">
-        <h1>LR</h1>
+        <a href="../index.html"><img src="../imagenes/LR Logo.svg" alt="" /></a>
       </div>
       <!-- BURGER BUTTON -->
       <a href="#" class="burger-container" id="burger">
@@ -33,13 +29,11 @@
       </a>
       <nav class="nav-container">
         <ul class="ul-container">
-          <li class="li-container">
-            <a href="../index.html" id="lista1">Quién Soy</a>
-          </li>
-          <!--ELEMENTO CON ID ENCABEZADO-->
           <li class="li-container"><a href="#">Curriculum</a></li>
           <li class="li-container"><a href="#">Información de contacto</a></li>
-          <li class="li-container"><a href="proyectos.html">Proyectos</a></li>
+          <li class="li-container">
+            <a href="proyectos.html">Proyectos</a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -66,11 +60,33 @@
       </div>
     </div>
 
+    <!-- MODAL DE CONTACTOS -->
+    <div class="modal-background">
+      <div class="modal">
+        <div class="cross">
+          <img src="imagenes/cross.svg" />
+        </div>
+        <h2>Número Tlf: <span>+54 9 11 6849 4057</span></h2>
+        <h2>Número Ws: <span>+54 9 11 2774 4565</span></h2>
+        <h2>Correo: <span>luisrev97@gmail.com</span></h2>
+      </div>
+    </div>
+
     <!-- CUERPO DE PAGINA -->
     <main>
-      <section></section>
-
-      <section></section>
+      <!---->
+      <section class="proyectos aboutMe">
+        <div class="desc">
+          <h1>Sobre Mi</h1>
+          <p>
+            Radicado en Belgrano, CABA. Soy un Ingeniero Electrónico y Técnico
+            Eléctrico, y a lo largo de mi carrera he desarrollado diversas
+            experiencias en el rubro de sistemas y tecnología. Actualmente
+            construyendo mi camino como web developer de forma autodidacta.
+          </p>
+        </div>
+      </section>
+      <!---->
     </main>
 
     <!-- PIE DE PAGINA -->
@@ -81,5 +97,8 @@
     </footer>
 
     <script src="../main.js"></script>
+    <script src="../slides1.js"></script>
+    <script src="../modalContacto.js"></script>
+    <!-- <script src="slides2.js"></script> -->
   </body>
 </html>

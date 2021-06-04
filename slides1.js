@@ -19,9 +19,9 @@ function swipeProject(num) {
 swipeProject(initial);
 
 const prev = prevButton.addEventListener("click", function () {
-  swipeProject((initial -= 1));
+  return swipeProject((initial -= 1));
 });
 
 const next = nextButton.addEventListener("click", function () {
-  swipeProject((initial += 1));
+  return swipeProject((initial += 1));
 });
