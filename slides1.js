@@ -6,7 +6,7 @@ const pageInd = document.getElementsByClassName("pag-proyecto");
 let initial = 1;
 
 function swipeProject(num) {
-  const proyectos = ["Sushi bar", "en construcción", "en construcción"];
+  const proyectos = ["Sushi bar", "Extensión de Chrome", "en construcción"];
   slides.forEach((slide, ind) => {
     slide.style.display = "none";
     pageInd[ind].innerHTML = `Página ${ind + 1}: ${proyectos[ind]}`;

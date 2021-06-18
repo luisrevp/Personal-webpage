@@ -15,6 +15,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/proyectos.css" />
     <title>Mi página web</title>
   </head>
   <body>
@@ -29,7 +30,11 @@
       </a>
       <nav class="nav-container">
         <ul class="ul-container">
-          <li class="li-container"><a href="#">Curriculum</a></li>
+          <li class="li-container">
+            <a href="../imagenes/CV Luis Revilla front-end developer.pdf"
+              >Curriculum</a
+            >
+          </li>
           <li class="li-container"><a href="#">Información de contacto</a></li>
           <li class="li-container">
             <a href="proyectos.html">Proyectos</a>
@@ -38,55 +43,53 @@
       </nav>
     </header>
 
-    <!-- REDES SOCIALES -->
-    <div class="redes-wrapper">
-      <div class="redes-container">
-        <p>Redes</p>
-        <div class="logo linkedin">
-          <a href="https://www.linkedin.com/in/luis-revilla/" target="_blank"
-            ><i class="fab fa-linkedin"></i
-          ></a>
-        </div>
-        <div class="logo github">
-          <a href="https://github.com/luisrevp" target="_blank"
-            ><i class="fab fa-github-square"></i
-          ></a>
-        </div>
-        <div class="logo instagram">
-          <a href="https://www.instagram.com/luisrevp/" target="_blank"
-            ><i class="fab fa-instagram"></i
-          ></a>
-        </div>
-      </div>
-    </div>
-
     <!-- MODAL DE CONTACTOS -->
     <div class="modal-background">
       <div class="modal">
         <div class="cross">
-          <img src="imagenes/cross.svg" />
+          <img src="../imagenes/cross.svg" />
         </div>
-        <h2>Número Tlf: <span>+54 9 11 6849 4057</span></h2>
-        <h2>Número Ws: <span>+54 9 11 2774 4565</span></h2>
-        <h2>Correo: <span>luisrev97@gmail.com</span></h2>
+        <div>
+          <img src="../imagenes/phonesvg.svg" alt="" />
+          <h2>Número Tlf</h2>
+        </div>
+        <h3>+54 9 11 6849 4057</h3>
+        <div>
+          <img id="ws" src="../imagenes/Whatsapp_logo_large.svg" alt="" />
+        </div>
+        <h3>+54 9 11 2774 4565</h3>
+        <div>
+          <img src="../imagenes/mail.svg" alt="" />
+          <h2>Correo</h2>
+        </div>
+        <h3>luisrev97@gmail.com</h3>
       </div>
     </div>
 
     <!-- CUERPO DE PAGINA -->
     <main>
-      <!---->
-      <section class="proyectos aboutMe">
-        <div class="desc">
-          <h1>Sobre Mi</h1>
+      <h1>Mis Proyectos</h1>
+      <div class="projects-container">
+        <div class="project-wrap">
+          <iframe
+            class="projects sushi"
+            src="https://luisrevp.github.io/Sushi-restaurant/"
+          ></iframe>
+          <h2>Restaurante de sushi</h2>
+          <p>Local de comida asiática ficticio hecho en vanilla javascript</p>
+        </div>
+        <div class="project-wrap">
+          <iframe
+            class="projects clock"
+            src="https://luisrevp.github.io/Chrome-clock-extension/reloj.html"
+          ></iframe>
+          <h2>Extensión de Chrome</h2>
           <p>
-            Radicado en Belgrano, CABA. Soy un Ingeniero Electrónico y Técnico
-            Eléctrico, y a lo largo de mi carrera he desarrollado diversas
-            experiencias en el rubro de sistemas y tecnología. Actualmente
-            construyendo mi camino como web developer de forma autodidacta.
+            Reloj dinámico que incorpora un switch de modo nocturno.<br />
+            Creado para ser instalado en Google Chrome
           </p>
         </div>
-      </section>
-      <!---->
+      </div>
     </main>
 
     <!-- PIE DE PAGINA -->
