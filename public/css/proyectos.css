@@ -19,7 +19,7 @@ h1 {
 
 .project-wrap {
   width: 70vw;
-  height: 80vh;
+  height: 90vh;
   padding: 30px;
   margin: 30px auto;
   background: #333;
@@ -40,6 +40,7 @@ h1 {
 @media screen and (max-width: 720px) {
   .project-wrap {
     width: 100vw;
+    height: 80vh;
     padding: 0;
   }
 
