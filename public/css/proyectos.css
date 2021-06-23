@@ -12,7 +12,7 @@ h1 {
 .projects-container,
 .project-wrap {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column wrap !important;
   align-items: center;
   justify-content: center;
 }
