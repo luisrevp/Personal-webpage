@@ -30,9 +30,7 @@ async function getAllMyRepos(url){
 }
 
 const showResponse = (response) => {
-  console.log(response);
   let projects = response.filter(project => {
-    console.log(project);
     return project.homepage != null
       && project.homepage.includes(project.owner.login)
       && !project.name.toLowerCase().includes("personal-webpage");
@@ -61,8 +59,6 @@ const showResponse = (response) => {
       slidesContainer.insertBefore(wrapper, nextButton);
       slideshow.appendChild(description);
       descriptions.push(description);
-      console.log(descriptions);
-      console.log(wrapper);
     });
   } else {
     noProjectsToShow.innerHTML = "There are no projects to display...";

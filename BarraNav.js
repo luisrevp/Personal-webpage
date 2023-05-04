@@ -24,6 +24,5 @@ burgerButton.addEventListener("click", dropdown);
 
 burgerButton.addEventListener("click", (e) => {
   let trueState = !show;
-  console.log(trueState, show);
   return !trueState ? show : trueState;
 });

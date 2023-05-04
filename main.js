@@ -1,6 +1,3 @@
-// import { createRequire } from 'module';
-// const require = createRequire(import.meta.url);
-
 var cors = require("cors");
 var fs = require('fs');
 var path = require("path");
@@ -17,10 +14,7 @@ app.use(express.static(__dirname));
 app.use(bodyparser.urlencoded({extended: false}));
 app.use(bodyparser.json());
 
-// homepage
-// app.get("/", (req, res) => res.render("index"));
-
-// endpoint de tipo POST
+// endpoint de tipo POST para enviar el mail
 app.post("/send-email", (req, res) => {
   
     const output = `
@@ -62,6 +56,7 @@ app.post("/send-email", (req, res) => {
   })
 });
 
+// endpoint de tipo GET para notificar envío de email
 app.get("/hello-world", cors(), (req, res) => {
   if(res.statusCode == 200){
     res.send(JSON.stringify({

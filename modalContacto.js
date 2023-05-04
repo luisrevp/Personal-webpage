@@ -1,7 +1,6 @@
 const buttonModal = document.querySelector(".li-container:nth-child(2)");
 const cancel = document.querySelector(".modal > .cross");
 const modal = document.querySelector(".modal-background");
-console.log(buttonModal, cancel, modal);
 
 buttonModal.addEventListener("click", showModal);
 cancel.addEventListener("click", hideModal);

@@ -80,7 +80,7 @@ async function getHelloWorld(url){
     });
     if(request.ok){
       const response = await request.json();
-      const clientMessage = `Mensaje de ${response.from}: ${response.message}`;
+      const clientMessage = `Message for ${response.from}: ${response.message}`;
       console.log(clientMessage);
       return clientMessage;
     }else{
