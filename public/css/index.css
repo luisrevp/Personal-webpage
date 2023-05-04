@@ -393,12 +393,11 @@ MODAL DE CONTACTOS
 /*CONTENEDOR DE LAS IMAGENES*/
 
 .tool-container {
-  display: flex;
-  margin: auto;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center; /*SE APLICA AL CONTENEDOR SIEMPRE*/
-  padding: 0px 12vw;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(220px, 280px));
+  grid-auto-flow: dense;
+  grid-gap: 25px;
+  margin: 0px 50px;
 }
 
 .tool-container > .images {
@@ -407,9 +406,8 @@ MODAL DE CONTACTOS
   flex-wrap: wrap;
   width: 280px;
   min-height: 300px;
-  margin: 20px 35px;
+  /* margin: 20px 35px; */
   background: #f0f0f042;
-  /* border-radius: 10%; */
   transition: transform 0.5s;
   transition-timing-function: ease;
 }
@@ -451,7 +449,7 @@ MODAL DE CONTACTOS
   margin-bottom: 10px;
 }
 
-/*SECCION 3 -- DIAPOSITIVAS DE PROYECTOS*/
+/*SECCION 3 -- DIAPOSITIVAS DE PROYECTOS -- CAROUSEL*/
 
 .slideshow {
   display: flex;
@@ -529,7 +527,12 @@ MODAL DE CONTACTOS
   text-decoration: underline;
 }
 
+.buttons-responsive{
+  display: none;
+}
+
 .moveProject {
+  display: block;
   position: absolute;
   border: none;
   background: none;
@@ -575,12 +578,10 @@ form {
   padding: 100px 0px !important;
   min-height: 100vh;
   border-top: 5px solid orange;
-  /* background: var(--morado); */
   background: linear-gradient(to bottom, var(--morado), #b224ef);
-  /* background: linear-gradient(-225deg, #ac32e4 0%, #7918f2 48%, #4801ff 100%); */
 }
 
-form .formulario {
+form .form-wrapper {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -595,14 +596,14 @@ form .formulario {
   box-shadow: 20px 20px 0px #333;
 }
 
-.formulario h1 {
+.form-wrapper h1 {
   font-size: 2em;
   margin-bottom: 20px;
   color: white;
 }
 
-.formulario input,
-.formulario textarea {
+.form-wrapper input,
+.form-wrapper textarea {
   width: 100%;
   display: block;
   margin: 10px 0px;
@@ -614,22 +615,22 @@ form .formulario {
   border-left: 4px solid #cdaa2a;
 }
 
-.formulario input {
+.form-wrapper input {
   height: 40px;
 }
 
-.formulario textarea {
+.form-wrapper textarea {
   max-width: 100%;
   height: 300px;
   padding-top: 10px;
 }
 
-.formulario input::placeholder,
-.formulario textarea::placeholder {
+.form-wrapper input::placeholder,
+.form-wrapper textarea::placeholder {
   font-size: 1em;
 }
 
-.formulario .sendForm {
+.form-wrapper .sendForm {
   display: inline-block;
   width: 100%;
   height: 60px;
@@ -650,7 +651,7 @@ form .formulario {
   cursor: pointer;
 }
 
-.formulario h2 {
+.form-wrapper h2 {
   opacity: 1;
 }
 
@@ -705,7 +706,7 @@ footer div > p {
   }
 }
 
-.formulario h2 {
+.form-wrapper h2 {
   animation-name: anuncio;
   animation-duration: 0.6s;
   animation-play-state: inherit;
@@ -743,16 +744,6 @@ footer div > p {
 /*MEDIA QUERIES: DISEÑO RESPONSIVE*/
 /*///////////////////////////////////////////////////////////////*/
 
-@media screen and (max-width: 1210px){
-  .images{
-    width: 220px !important;
-  }
-
-  .tool-container {
-    padding: 0;
-  }
-}
-
 @media screen and (max-width: 1100px) {
   .aboutMe {
     padding: 0;
@@ -782,7 +773,18 @@ footer div > p {
   }
 }
 
-@media screen and (max-width: 730px) {
+@media screen and (max-width: 970px){
+    .tool-container {
+      grid-template-columns: repeat(2, minmax(220px, 280px));
+    }
+
+    .tool-container .images{
+      min-width: 220px;
+    }
+}
+
+
+@media screen and (max-width: 670px) {
   header {
     display: flex;
     flex-wrap: wrap;
@@ -836,6 +838,11 @@ footer div > p {
     margin: 20px 0px;
   }
 
+  .tool-container {
+    display: flex;
+    flex-direction: column;
+  }
+
   @keyframes listado {
     0% {
       opacity: 0;
@@ -887,14 +894,54 @@ footer div > p {
     box-shadow: 0px 20px 20px #000;
   }
 
-  /*FORMULARIO*/
+  /*SLIDER*/
+  .slide-wrap .moveProject{
+    display: none;
+  }
 
-  form .formulario {
+  .buttons-responsive{
+    display: block;
+  }
+
+  .buttons-responsive .moveProject-resp{
+    display: inline-block;
+    width: 28vw;
+    height: 40px;
+    padding: 10px;
+    margin: 25px 10px;
+    border: 1px solid #fff;
+    outline: none;
+    background: black;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    transition: background 0.3s;
+  }
+
+  .buttons-responsive .moveProject-resp:hover{
+    background: #ccc;
+    cursor: pointer;
+  }
+
+  .slide .project-link{
+    max-width: 100%;
+  }
+
+  /*FORMULARIO*/
+  form{
+    padding: 0 !important;
+    min-height: unset;
+
+  }
+
+  form .form-wrapper {
     display: block;
     width: 100%;
-    padding: 30px 25px;
+    padding: 30px 10vw;
     text-align: center;
     box-shadow: none;
+    border: none;
   }
 
   /* FOOTER */
@@ -907,3 +954,4 @@ footer div > p {
 .nav-container {
   display: block;
 }
+

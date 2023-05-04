@@ -2,7 +2,7 @@
 /views
 package.json
 package-lock.json
-nodemailer.js
+# nodemailer.js
 slides2.js
 playground.html
 playground.css

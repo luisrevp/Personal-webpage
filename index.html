@@ -143,33 +143,38 @@
           <button type="button" class="moveProject prev">&lt;</button>
           <button type="button" class="moveProject next">&gt;</button>
       </div>
+      <div class="buttons-responsive">
+          <button type="button" class="moveProject-resp prev-resp">PREVIOUS</button>
+          <button type="button" class="moveProject-resp next-resp">NEXT</button>
+      </div>
       </section>
     </main>
 
     <!-- FORMULARIO -->
     <form>
-      <!--action="mailto:luisrev97@gmail.com" method="GET"-->
-      <div class="formulario">
+      <div class="form-wrapper">
         <h1>Contact me!</h1>
         <input
+          name="username"
           type="text"
           class="nombre"
           placeholder="Full Name"
           required
         />
         <input
+          name="email"
           type="email"
           class="correo"
           placeholder="example@example.com"
           required
         />
         <textarea
-          name="comentario"
+          name="message"
           class="comentario"
           placeholder="Write your message"
           required
         ></textarea>
-        <button type="submit" class="sendForm">Send</button>
+        <button type="button" class="sendForm">Send</button>
       </div>
     </form>
 
@@ -180,9 +185,10 @@
       </div>
     </footer>
 
-    <script src="main.js"></script>
-    <script src="projects.js"></script>
-    <script src="modalContacto.js"></script>
     <script src="BarraNav.js"></script>
+    <script src="modalContacto.js"></script>
+    <script src="projectsCarousel.js"></script>
+    <script src="contactForm.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
