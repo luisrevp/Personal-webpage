@@ -21,13 +21,17 @@
   <body>
     <!-- ENCABEZADO -->
     <header>
-      <div class="logo-container">
-        <a href="index.html"><img src="imagenes/LR Logo.svg" alt=""></a>
+      <div class="top-nav">
+        <a href="index.html" id="top-nav-logo">
+          <img src="imagenes/LR Logo.svg" alt="">
+        </a>
+        <div class="burger-container">
+            <a href="#" id="burger">
+              <img src="imagenes/Hamburger.svg" alt="" />
+            </a>
+        </div>
       </div>
       <!-- BURGER BUTTON -->
-      <a href="#" class="burger-container" id="burger">
-        <img src="imagenes/Hamburger.svg" alt="" /> Show/Hide
-      </a>
       <nav class="nav-container">
         <ul class="ul-container">
           <li class="li-container"><a href="imagenes/Luis Revilla - CV.pdf" target="_blank">Resume</a></li>
@@ -185,7 +189,6 @@
       </div>
     </footer>
 
-    <script src="BarraNav.js"></script>
     <script src="modalContacto.js"></script>
     <script src="projectsCarousel.js"></script>
     <script src="contactForm.js"></script>

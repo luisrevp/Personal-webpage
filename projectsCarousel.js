@@ -48,6 +48,7 @@ const showResponse = (response) => {
       titleContainer.classList.add("project-link-container");
       title.classList.add("project-link");
       title.href = project.homepage;
+      title.target = "_blank";
       title.innerHTML = project.name.toUpperCase().replace(/-/g, " ");
       description.classList.add("project-description");
       
