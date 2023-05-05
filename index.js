@@ -1,3 +1,5 @@
+// modal de contacto
+
 const buttonModal = document.querySelector(".li-container:nth-child(2)");
 const cancel = document.querySelector(".modal > .cross");
 const modal = document.querySelector(".modal-background");
@@ -28,3 +30,8 @@ function hideModal() {
 function noScroll() {
   return window.scrollTo(0, 0);
 }
+
+// footer
+
+const footerText = document.querySelector(".footer-container > p");
+footerText.innerHTML = `Luis Revilla, ${new Date().getFullYear()}`;
